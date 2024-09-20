@@ -10,6 +10,6 @@ namespace Herencia
     {
         public Cuadrado() { }
 
-        public Cuadrado(int baseR, int altura, int lado) : base(baseR, altura, lado, lado) { }
+        public Cuadrado(int altura) : base(altura, altura) { }
     }
 }

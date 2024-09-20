@@ -10,12 +10,10 @@ namespace Herencia
     {
         protected int baseRectangulo;
         protected int altura;
-        protected int lado1;
-        protected int lado2;
 
         public Rectangulo() { }
 
-        public Rectangulo(int baseRectangulo, int altura, int lado1, int lado2) : base(4)
+        public Rectangulo(int baseRectangulo, int altura) : base(4)
         {
             this.baseRectangulo = baseRectangulo;
             this.altura = altura;
