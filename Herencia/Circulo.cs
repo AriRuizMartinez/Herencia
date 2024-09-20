@@ -12,9 +12,9 @@ namespace Herencia
 
         public Circulo(int radio) : base(radio, radio) { }
 
-        public float GetPerimetro()
+        public new int GetPerimetro()
         {
-            return (float)(Math.PI * 2 * radio1);
+            return (int)(Math.PI * 2 * radio1);
         }
 
         public override string ToString()

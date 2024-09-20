@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Herencia
 {
-    public class Poligono : Forma2D
+    public abstract class Poligono : IForma2D
     {
         protected int numeroDeLados;
 
@@ -17,5 +17,8 @@ namespace Herencia
             numeroDeLados = lados;
         }
 
+        public abstract float GetArea();
+
+        public abstract int GetPerimetro();
     }
 }

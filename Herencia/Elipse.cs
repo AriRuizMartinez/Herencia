@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Herencia
 {
-    public class Elipse : Forma2D
+    public class Elipse : IForma2D
     {
         protected int radio1;
         protected int radio2;
@@ -24,13 +24,18 @@ namespace Herencia
             return (float) (radio1 * radio2 * Math.PI);
         }
 
-        public float GetPerimetro()
+        public int GetPerimetro()
         {
             // Fórmula de Ramanujan
             double pi = Math.PI; 
             double term1 = 3 * (radio1 + radio2); 
             double term2 = Math.Sqrt((3 * radio1 + radio2) * (radio1 + 3 * radio2)); 
-            return (float) (pi * (term1 - term2)); 
+            return (int) (pi * (term1 - term2)); 
+        }
+
+        public override string ToString()
+        {
+            return $"Elipse de radios {radio1} y {radio2}";
         }
     }
 }

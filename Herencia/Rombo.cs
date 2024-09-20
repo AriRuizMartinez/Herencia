@@ -24,12 +24,12 @@ namespace Herencia
              return (int) Math.Sqrt(Math.Pow(diagonal1/2, 2) + Math.Pow(diagonal2/2, 2));
         }
 
-        public float GetArea()
+        public override float GetArea()
         {
             return (diagonal1 * diagonal2) / 2;
         }
 
-        public int GetPerimetro()
+        public override int GetPerimetro()
         {
             return CalcularLado() * 4;
         }

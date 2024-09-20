@@ -22,12 +22,12 @@ namespace Herencia
             this.angulo = angulo * (Math.PI / 180);
         }
 
-        public float GetArea() 
+        public override float GetArea() 
         {
             return (baseTriangulo * altura) / 2;
         }
 
-        public int GetPerimetro()
+        public override int GetPerimetro()
         {
             // Calcular el lado adyacente al ángulo (hipotenusa en un triángulo rectángulo que formaría la altura)
             int ladoAdyacente = (int) (altura / Math.Sin(angulo));

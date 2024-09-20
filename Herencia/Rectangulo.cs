@@ -19,12 +19,12 @@ namespace Herencia
             this.altura = altura;
         }
 
-        public int GetArea()
+        public override float GetArea()
         {
             return baseRectangulo * altura;
         }
 
-        public int GetPerimetro()
+        public override int GetPerimetro()
         {
             return baseRectangulo * 2 + altura * 2;
         }
