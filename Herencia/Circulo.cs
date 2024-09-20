@@ -16,5 +16,10 @@ namespace Herencia
         {
             return (float)(Math.PI * 2 * radio1);
         }
+
+        public override string ToString()
+        {
+            return "Circulo de radio " + radio1;
+        }
     }
 }

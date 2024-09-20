@@ -35,5 +35,10 @@ namespace Herencia
         {
             return lado * 4;
         }
+
+        public override string ToString()
+        {
+            return $"Rombo con diagonales {diagonal1} y {diagonal2}";
+        }
     }
 }

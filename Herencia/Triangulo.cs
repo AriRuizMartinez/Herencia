@@ -37,5 +37,10 @@ namespace Herencia
         {
             return lado1 + lado2 + lado3;
         }
+
+        public override string ToString()
+        {
+            return $"Triangulo con base {baseTriangulo} y altura {altura}. Lados: {lado1}, {lado2}, {lado3}.";
+        }
     }
 }

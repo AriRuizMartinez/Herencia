@@ -11,5 +11,10 @@ namespace Herencia
         public Cuadrado() { }
 
         public Cuadrado(int altura) : base(altura, altura) { }
+
+        public override string ToString()
+        {
+            return "Cuadrado de lado " + altura;
+        }
     }
 }
