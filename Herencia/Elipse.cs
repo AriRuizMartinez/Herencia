@@ -18,5 +18,19 @@ namespace Herencia
             this.radio1 = radio1;
             this.radio2 = radio2;
         }
+
+        public float GetArea()
+        {
+            return (float) (radio1 * radio2 * Math.PI);
+        }
+
+        public float GetPerimetro()
+        {
+            // Fórmula de Ramanujan
+            double pi = Math.PI; 
+            double term1 = 3 * (radio1 + radio2); 
+            double term2 = Math.Sqrt((3 * radio1 + radio2) * (radio1 + 3 * radio2)); 
+            return (float) (pi * (term1 - term2)); 
+        }
     }
 }

@@ -27,5 +27,15 @@ namespace Herencia
             this.altura = altura;
             this.angulo = angulo;
         }
+
+        public float GetArea() 
+        {
+            return (baseTriangulo * altura) / 2;
+        }
+
+        public int GetPerimetro()
+        {
+            return lado1 + lado2 + lado3;
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace Herencia
     {
         static void Main(string[] args)
         {
+            Elipse elipse = new Elipse(1, 2);
         }
     }
 }

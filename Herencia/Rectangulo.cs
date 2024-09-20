@@ -17,8 +17,16 @@ namespace Herencia
         {
             this.baseRectangulo = baseRectangulo;
             this.altura = altura;
-            this.lado1 = lado1;
-            this.lado2 = lado2;
+        }
+
+        public int GetArea()
+        {
+            return baseRectangulo * altura;
+        }
+
+        public int GetPerimetro()
+        {
+            return baseRectangulo * 2 + altura * 2;
         }
     }
 }

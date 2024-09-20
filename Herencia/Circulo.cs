@@ -11,5 +11,10 @@ namespace Herencia
         public Circulo() { }
 
         public Circulo(int radio) : base(radio, radio) { }
+
+        public float GetPerimetro()
+        {
+            return (float)(Math.PI * 2 * radio1);
+        }
     }
 }
