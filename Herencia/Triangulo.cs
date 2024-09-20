@@ -8,24 +8,18 @@ namespace Herencia
 {
     public class Triangulo : Poligono
     {
-        int lado1;
-        int lado2;
-        int lado3;
-
         int baseTriangulo;
         int altura;
-        int angulo;
+        double angulo;
 
         public Triangulo() { }
 
-        public Triangulo(int lado1, int lado2, int lado3, int baseTriangulo, int altura, int angulo) : base(3)
+        public Triangulo(int baseTriangulo, int altura, int angulo) : base(3)
         {
-            this.lado1 = lado1;
-            this.lado2 = lado2;
-            this.lado3 = lado3;
             this.baseTriangulo = baseTriangulo;
             this.altura = altura;
-            this.angulo = angulo;
+            //Lo pasamos de grados a radianes
+            this.angulo = angulo * (Math.PI / 180);
         }
 
         public float GetArea() 
@@ -35,12 +29,19 @@ namespace Herencia
 
         public int GetPerimetro()
         {
-            return lado1 + lado2 + lado3;
+            // Calcular el lado adyacente al ángulo (hipotenusa en un triángulo rectángulo que formaría la altura)
+            int ladoAdyacente = (int) (altura / Math.Sin(angulo));
+
+            // Calcular el lado opuesto (largo del otro lado)
+            int ladoOpuesto = (int) (baseTriangulo / Math.Cos(angulo));
+
+            // Calcular el perímetro sumando los lados
+            return  baseTriangulo + ladoAdyacente + ladoOpuesto;
         }
 
         public override string ToString()
         {
-            return $"Triangulo con base {baseTriangulo} y altura {altura}. Lados: {lado1}, {lado2}, {lado3}.";
+            return $"Triangulo con base {baseTriangulo}, altura {altura} y angulo {angulo}.";
         }
     }
 }

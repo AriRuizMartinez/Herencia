@@ -10,14 +10,12 @@ namespace Herencia
     {
         int diagonal1;
         int diagonal2;
-        int lado;
 
         public Rombo() { }
         public Rombo(int diagonal1, int diagonal2) : base(4) 
         {
             this.diagonal1 = diagonal1;
             this.diagonal2 = diagonal2;
-            lado = CalcularLado();
         }
 
         private int CalcularLado()
@@ -33,7 +31,7 @@ namespace Herencia
 
         public int GetPerimetro()
         {
-            return lado * 4;
+            return CalcularLado() * 4;
         }
 
         public override string ToString()
